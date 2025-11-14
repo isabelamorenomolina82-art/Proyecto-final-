@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Venta 💅</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>💄 Belleza Pura - Registro de Ventas 💄</h1>
+
+    {% if mensaje %}
+        <div class="mensaje">{{ mensaje }}</div>
+    {% endif %}
+
+    <form action="/registrar_venta" method="post">
+        <input type="text" name="cliente" placeholder="Nombre del cliente" required><br>
+        <input type="text" name="categoria" placeholder="categoria" required><br>
+        <input type="number" name="cantidad" placeholder="Cantidad" required><br>
+        <input type="text" name="marca" placeholder="Marca" required><br>
+        <input type="number" step="0.01" name="precio" placeholder="Precio unitario" required><br>
+        <input type="submit" value="Registrar venta">
+    </form>
+
+    <a class="boton" href="/reportes">📊 Ver reportes</a>
+</body>
+</html>
